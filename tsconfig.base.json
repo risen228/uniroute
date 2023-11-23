@@ -1,0 +1,30 @@
+{
+  "exclude": ["node_modules", "**/dist"],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@uniroute/core": ["libs/core/src/index.ts"],
+      "@uniroute/core/codegen": ["libs/core/src/codegen/index.ts"],
+      "@uniroute/core/client": ["libs/core/src/client/index.ts"],
+      "@uniroute/core/server": ["libs/core/src/server/index.ts"],
+      "@example/model": ["example/model/src/index.ts"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

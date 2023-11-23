@@ -1,0 +1,13 @@
+{
+  "name": "@example/server",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "generate:json": "uniroute generate -c ./uniroute.json.json",
+    "generate:ts": "uniroute generate -c uniroute.ts.json"
+  },
+  "dependencies": {
+    "@uniroute/core": "workspace:*"
+  }
+}

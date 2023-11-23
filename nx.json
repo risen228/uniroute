@@ -1,0 +1,85 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "nx.json": "*"
+  },
+  "namedInputs": {
+    "shared": [
+      "{workspaceRoot}/tsconfig.base.json",
+      "{workspaceRoot}/package.json"
+    ],
+    "src": [
+      "{projectRoot}/index.html",
+      "{projectRoot}/public/**/*",
+      "{projectRoot}/src/**/*",
+      "!{projectRoot}/src/*.test.ts",
+      "!{projectRoot}/src/*.test.tsx"
+    ],
+    "test": [
+      "{projectRoot}/**/*.test.ts",
+      "{projectRoot}/**/*.test.tsx",
+      "{projectRoot}/jest.config.ts",
+      "{projectRoot}/jest.config.js"
+    ],
+    "config": [
+      "{projectRoot}/package.json",
+      "{projectRoot}/tsconfig.json",
+      "{projectRoot}/tsconfig.app.json",
+      "{projectRoot}/tsconfig.spec.json",
+      "{projectRoot}/vite.config.*",
+      "{projectRoot}/next.config.*",
+      "{projectRoot}/rollup.config.*"
+    ],
+    "scripts": [
+      "{projectRoot}/build.*",
+      "{projectRoot}/scripts/**/*"
+    ]
+  },
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"],
+      "inputs": ["shared", "config", "scripts", "^scripts", "src", "^src"]
+    },
+    "test": {
+      "cache": true,
+      "inputs": [
+        "shared",
+        "config",
+        "test",
+        "src",
+        "^src",
+        "{workspaceRoot}/jest.preset.js"
+      ]
+    },
+    "typecheck": {
+      "cache": true,
+      "inputs": ["shared", "config", "test", "src", "^src"]
+    },
+    "lint": {
+      "cache": true,
+      "inputs": ["shared", "config", "test", "src"]
+    },
+    "dev": {
+      "dependsOn": ["^build", "dev"]
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "nxCloudAccessToken": "YmIxMmFkZDctMWFiOC00NDY4LTlmOTAtMGQxZjhjNmIwNzE5fHJlYWQtd3JpdGU="
+}

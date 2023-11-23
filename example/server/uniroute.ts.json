@@ -1,0 +1,14 @@
+{
+  "input": {
+    "type": "sources",
+    "tsConfigFilePath": "./tsconfig.json",
+    "sourceFilePath": "./src/routes/index.ts",
+    "routesVariable": "routes",
+    "externals": ["@example/model"]
+  },
+  "output": {
+    "type": "ts",
+    "tsConfigFilePath": "./tsconfig.json",
+    "targetFilePath": "./src/generated/metadata.ts"
+  }
+}

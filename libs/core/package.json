@@ -1,0 +1,46 @@
+{
+  "name": "@uniroute/core",
+  "version": "0.0.15",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "bin": {
+    "uniroute": "./bin/uniroute.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "import": "./dist/server.mjs",
+      "default": "./dist/server.js"
+    },
+    "./client": {
+      "import": "./dist/client.mjs",
+      "default": "./dist/client.js"
+    },
+    "./codegen": {
+      "import": "./dist/codegen.mjs",
+      "default": "./dist/codegen.js"
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "publish-npm": "cd dist && npm publish"
+  },
+  "dependencies": {
+    "change-case": "^4.0.0",
+    "ts-morph": "^20.0.0",
+    "yargs": "^17.7.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.32"
+  }
+}

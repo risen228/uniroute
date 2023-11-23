@@ -1,0 +1,20 @@
+{
+  "name": "@example/server",
+  "projectType": "application",
+  "targets": {
+    "generate:json": {
+      "inputs": ["shared", "config", "src", "^src", "{projectRoot}/uniroute.json.json"],
+      "outputs": ["{projectRoot}/src/generated/metadata.json"],
+      "dependsOn": ["^build"],
+      "cache": true,
+      "command": "yarn generate:json"
+    },
+    "generate:ts": {
+      "inputs": ["shared", "config", "src", "^src", "{projectRoot}/src/uniroute.ts.json"],
+      "outputs": ["{projectRoot}/src/generated/metadata.ts"],
+      "dependsOn": ["^build"],
+      "cache": true,
+      "command": "yarn generate:ts"
+    }
+  }
+}
