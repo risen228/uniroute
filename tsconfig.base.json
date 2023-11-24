@@ -17,11 +17,11 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
+      "@example/model": ["example/model/src/index.ts"],
       "@uniroute/core": ["libs/core/src/index.ts"],
-      "@uniroute/core/codegen": ["libs/core/src/codegen/index.ts"],
       "@uniroute/core/client": ["libs/core/src/client/index.ts"],
-      "@uniroute/core/server": ["libs/core/src/server/index.ts"],
-      "@example/model": ["example/model/src/index.ts"]
+      "@uniroute/core/codegen": ["libs/core/src/codegen/index.ts"],
+      "@uniroute/core/server": ["libs/core/src/server/index.ts"]
     }
   },
   "ts-node": {
