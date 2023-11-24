@@ -4,17 +4,11 @@
     "appsDir": "apps",
     "libsDir": "libs"
   },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    "nx.json": "*"
-  },
   "namedInputs": {
     "shared": [
       "{workspaceRoot}/tsconfig.base.json",
-      "{workspaceRoot}/package.json"
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/nx.json"
     ],
     "src": [
       "{projectRoot}/index.html",
@@ -23,7 +17,9 @@
       "!{projectRoot}/src/*.test.ts",
       "!{projectRoot}/src/*.test.tsx"
     ],
-    "dist": ["{projectRoot}/dist/**/*"],
+    "dist": [
+      "{projectRoot}/dist/**/*"
+    ],
     "test": [
       "{projectRoot}/**/*.test.ts",
       "{projectRoot}/**/*.test.tsx",
@@ -47,9 +43,20 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/dist"],
-      "inputs": ["shared", "config", "scripts", "^scripts", "src", "^src"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "inputs": [
+        "shared",
+        "config",
+        "scripts",
+        "^scripts",
+        "src",
+        "^src"
+      ]
     },
     "test": {
       "cache": true,
@@ -64,14 +71,28 @@
     },
     "typecheck": {
       "cache": true,
-      "inputs": ["shared", "config", "test", "src", "^src"]
+      "inputs": [
+        "shared",
+        "config",
+        "test",
+        "src",
+        "^src"
+      ]
     },
     "lint": {
       "cache": true,
-      "inputs": ["shared", "config", "test", "src"]
+      "inputs": [
+        "shared",
+        "config",
+        "test",
+        "src"
+      ]
     },
     "dev": {
-      "dependsOn": ["^build", "dev"]
+      "dependsOn": [
+        "^build",
+        "dev"
+      ]
     }
   },
   "affected": {
