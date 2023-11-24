@@ -33,6 +33,7 @@
   },
   "scripts": {
     "build": "node build.mjs",
+    "typecheck": "tsc",
     "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
   },
   "dependencies": {

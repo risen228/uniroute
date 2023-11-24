@@ -5,6 +5,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
+    "typecheck": "tsc",
     "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
   }
 }
