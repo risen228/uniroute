@@ -23,6 +23,7 @@
       "!{projectRoot}/src/*.test.ts",
       "!{projectRoot}/src/*.test.tsx"
     ],
+    "dist": ["{projectRoot}/dist/**/*"],
     "test": [
       "{projectRoot}/**/*.test.ts",
       "{projectRoot}/**/*.test.tsx",

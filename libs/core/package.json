@@ -1,9 +1,10 @@
 {
   "name": "@uniroute/core",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "./dist"
   },
   "sideEffects": false,
   "bin": {
@@ -32,7 +33,7 @@
   },
   "scripts": {
     "build": "node build.mjs",
-    "publish-npm": "cd dist && npm publish"
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
   },
   "dependencies": {
     "change-case": "^4.0.0",

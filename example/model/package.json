@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
+  }
 }

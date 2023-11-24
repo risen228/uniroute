@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "generate:json": "uniroute generate -c ./uniroute.json.json",
-    "generate:ts": "uniroute generate -c uniroute.ts.json"
+    "generate:ts": "uniroute generate -c uniroute.ts.json",
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
   },
   "dependencies": {
     "@uniroute/core": "workspace:*"
