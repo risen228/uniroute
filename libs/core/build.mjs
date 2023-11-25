@@ -1,6 +1,11 @@
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-import { buildCLI, buildLibrary, movePackageJson, emptyDirectory } from '@tooling/build'
+import {
+  buildCLI,
+  buildLibrary,
+  movePackageJson,
+  emptyDirectory,
+} from '@tooling/build'
 
 const dirname = fileURLToPath(new URL('.', import.meta.url))
 const pkgPath = path.resolve(dirname, 'package.json')

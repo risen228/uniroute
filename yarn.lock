@@ -3386,7 +3386,7 @@ __metadata:
   dependencies:
     "@tooling/build": "workspace:*"
   peerDependencies:
-    "@uniroute/core": ^0.1.0
+    "@uniroute/core": ^0.1.1
     zod: ^3.22.4
   languageName: unknown
   linkType: soft
