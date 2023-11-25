@@ -1,0 +1,32 @@
+{
+  "name": "@tooling/build",
+  "version": "0.0.0-internal",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc",
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\""
+  },
+  "dependencies": {
+    "common-path-prefix": "^3.0.0",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.1.1",
+    "rollup": "^4.5.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4"
+  }
+}
