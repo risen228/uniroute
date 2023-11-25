@@ -29,32 +29,17 @@
       "{projectRoot}/next.config.*",
       "{projectRoot}/rollup.config.*"
     ],
-    "scripts": [
-      "{projectRoot}/build.*",
-      "{projectRoot}/scripts/**/*"
-    ]
+    "scripts": ["{projectRoot}/build.*", "{projectRoot}/scripts/**/*"]
   },
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "shared",
-        "config",
-        "scripts",
-        "^scripts",
-        "src",
-        "^src"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["shared", "config", "scripts", "^scripts", "src", "^src"]
     },
     "test": {
       "cache": true,
-      "dependsOn": [
-        "build",
-        "^build"
-      ],
+      "dependsOn": ["build", "^build"],
       "inputs": [
         "shared",
         "config",
@@ -66,28 +51,14 @@
     },
     "typecheck": {
       "cache": true,
-      "inputs": [
-        "shared",
-        "config",
-        "test",
-        "src",
-        "^src"
-      ]
+      "inputs": ["shared", "config", "test", "src", "^src"]
     },
     "lint": {
       "cache": true,
-      "inputs": [
-        "shared",
-        "config",
-        "test",
-        "src"
-      ]
+      "inputs": ["shared", "config", "test", "src"]
     },
     "dev": {
-      "dependsOn": [
-        "^build",
-        "dev"
-      ]
+      "dependsOn": ["^build", "dev"]
     }
   },
   "affected": {
